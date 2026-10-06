@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brand Dashboard — Direct Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient></defs>
+  <symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="url(#lg)"/><circle cx="12.5" cy="16" r="5.5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="19.5" cy="16" r="5.5" fill="none" stroke="#fff" stroke-width="2.2" opacity=".75"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M15 4h4a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-4M10 17l-5-5 5-5M5 12h11"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 7h13l-4-4M17 17H4l4 4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="app">
+  <aside class="sidebar">
+    <a href="index.html" class="logo"><svg><use href="#logo"/></svg>Direct Connect</a>
+    <nav class="side-nav">
+      <a href="#overview"><svg class="ico"><use href="#i-home"/></svg>Overview</a>
+      <a href="#campaigns"><svg class="ico"><use href="#i-grid"/></svg>Campaigns<span class="count">2</span></a>
+      <a href="#discover"><svg class="ico"><use href="#i-search"/></svg>Discover</a>
+      <a href="#payments"><svg class="ico"><use href="#i-wallet"/></svg>Payments</a>
+      <a href="#messages"><svg class="ico"><use href="#i-chat"/></svg>Messages<span class="count">3</span></a>
+    </nav>
+    <div class="side-foot">
+      <div class="side-card"><b>Business verified</b><p>Identity, business and payment method verified.</p><span class="verified">Lumen Skincare</span></div>
+      <a href="index.html"><svg class="ico"><use href="#i-logout"/></svg>Log out</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <a href="index.html" class="logo top-logo"><svg><use href="#logo"/></svg>Direct Connect</a>
+      <label class="search"><svg class="ico"><use href="#i-search"/></svg><input class="input" type="search" placeholder="Search creators, campaigns…" aria-label="Search"></label>
+      <div class="top-actions">
+        <button class="icon-btn" aria-label="Notifications"><svg class="ico"><use href="#i-bell"/></svg><span class="pip"></span></button>
+        <a href="#campaigns" class="btn btn-primary"><svg class="ico" style="width:18px"><use href="#i-plus"/></svg><span class="lbl">New campaign</span></a>
+        <span class="av sm round ink" title="Riya Kapoor · Lumen Skincare">RK</span>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section class="view" id="overview">
+      <div class="page-head">
+        <div><h1>Good morning, Riya</h1><p>Here's what's happening across Lumen Skincare's campaigns.</p></div>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi glass hl"><div class="l">Protected funds</div><div class="v">₹1,25,000</div><div class="d">Across 2 funded campaigns</div></div>
+        <div class="kpi glass"><div class="l">Active campaigns</div><div class="v">2</div><div class="d">3 more in setup</div></div>
+        <div class="kpi glass"><div class="l">Awaiting your review</div><div class="v">2</div><div class="d">Oldest submitted 6h ago</div></div>
+        <div class="kpi glass"><div class="l">Avg. approval time</div><div class="v">18h</div><div class="d">Faster than 80% of brands</div></div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="col">
+          <div class="panel glass">
+            <div class="panel-head"><h2>Needs your attention</h2></div>
+            <ul class="list">
+              <li><span class="dot-ic"><svg class="ico"><use href="#i-upload"/></svg></span><div class="meta"><b>Review “Published Content”</b><span>Aanya Mehta · Monsoon Glow · Milestone 03 · ₹30,000</span></div><a href="#campaigns" class="btn btn-primary btn-sm">Review</a></li>
+              <li><span class="dot-ic"><svg class="ico"><use href="#i-upload"/></svg></span><div class="meta"><b>Review “Brief + Concept”</b><span>Rohan Das · Hydration Week · Milestone 01 · ₹25,000</span></div><a href="#campaigns" class="btn btn-primary btn-sm">Review</a></li>
+              <li><span class="dot-ic"><svg class="ico"><use href="#i-wallet"/></svg></span><div class="meta"><b>Fund “Sunscreen Summer Reels”</b><span>Kabir Rao accepted the contract · ₹60,000</span></div><a href="#payments" class="btn btn-ghost btn-sm">Fund</a></li>
+              <li><span class="dot-ic"><svg class="ico"><use href="#i-swap"/></svg></span><div class="meta"><b>Counter-offer from Meera Iyer</b><span>Night Repair Serum · ₹80,000 → ₹90,000</span></div><a href="#messages" class="btn btn-ghost btn-sm">Respond</a></li>
+            </ul>
+          </div>
+
+          <div class="panel glass">
+            <div class="panel-head"><h2>Campaigns</h2><a href="#campaigns" class="link">View all</a></div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead><tr><th>Campaign</th><th>State</th><th>Milestones</th><th class="r">Value</th></tr></thead>
+                <tbody>
+                  <tr><td><div class="who"><span class="av sm round alt">AM</span><div><b>Monsoon Glow Launch</b><span>Aanya Mehta</span></div></div></td><td><span class="chip warn">Under review</span></td><td style="min-width:120px"><div class="bar"><i style="width:50%"></i></div><span class="muted small">2 of 4 paid</span></td><td class="r">₹1,00,000</td></tr>
+                  <tr><td><div class="who"><span class="av sm round soft">RD</span><div><b>Hydration Week</b><span>Rohan Das</span></div></div></td><td><span class="chip warn">Under review</span></td><td><div class="bar"><i style="width:4%"></i></div><span class="muted small">0 of 3 paid</span></td><td class="r">₹75,000</td></tr>
+                  <tr><td><div class="who"><span class="av sm round">KR</span><div><b>Sunscreen Summer Reels</b><span>Kabir Rao</span></div></div></td><td><span class="chip">Contract accepted</span></td><td><span class="muted small">Awaiting funding</span></td><td class="r">₹60,000</td></tr>
+                  <tr><td><div class="who"><span class="av sm round ink">MI</span><div><b>Night Repair Serum</b><span>Meera Iyer</span></div></div></td><td><span class="chip idle">Negotiation</span></td><td><span class="muted small">—</span></td><td class="r">₹80,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="panel glass">
+            <div class="panel-head"><h2>Funds</h2><a href="#payments" class="link">Details</a></div>
+            <div class="fund-row"><div class="top"><span class="muted">Protected (held for milestones)</span><b>₹1,25,000</b></div><div class="bar"><i style="width:57%"></i></div></div>
+            <div class="fund-row"><div class="top"><span class="muted">Released this month</span><b>₹50,000</b></div><div class="bar ok"><i style="width:23%"></i></div></div>
+            <div class="fund-row"><div class="top"><span class="muted">Awaiting funding</span><b>₹60,000</b></div><div class="bar lite"><i style="width:27%"></i></div></div>
+          </div>
+
+          <div class="panel glass">
+            <div class="panel-head"><h2>Recommended creators</h2><a href="#discover" class="link">Discover</a></div>
+            <ul class="list">
+              <li><span class="av sm round soft">SK</span><div class="meta"><b>Sara Khan</b><span>Beauty · Instagram · 312K</span></div><span class="match">94%</span></li>
+              <li><span class="av sm round alt">NR</span><div class="meta"><b>Nisha Rao</b><span>Skincare · Instagram · 86K</span></div><span class="match">91%</span></li>
+              <li><span class="av sm round">DM</span><div class="meta"><b>Dev Malhotra</b><span>Lifestyle · YouTube · 1.1M</span></div><span class="match">87%</span></li>
+            </ul>
+          </div>
+
+          <div class="panel glass">
+            <div class="panel-head"><h2>Your reputation</h2></div>
+            <div class="stats">
+              <div class="stat"><div class="v" style="font-size:24px">42</div><div class="l">Campaigns completed</div></div>
+              <div class="stat"><div class="v" style="font-size:24px">4.7</div><div class="l">Creator rating</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campaigns -->
+    <section class="view" id="campaigns">
+      <div class="page-head">
+        <div><h1>Campaigns</h1><p>Every campaign, its state and its milestones — in one record.</p></div>
+        <div class="actions"><button class="btn btn-primary"><svg class="ico" style="width:18px"><use href="#i-plus"/></svg>New campaign</button></div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="panel glass">
+          <div class="panel-head">
+            <div class="who"><span class="av sm round alt">AM</span><div><b>Monsoon Glow Launch</b><span>with Aanya Mehta · Contract signed 12 Sep</span></div></div>
+            <span class="chip warn">Under review</span>
+          </div>
+          <ol class="steps">
+            <li class="done"><span class="n">01</span><div class="meta"><b>Brief + Concept</b><span>Approved 16 Sep</span></div><div class="right">₹20,000<span class="chip ok">Paid</span></div></li>
+            <li class="done"><span class="n">02</span><div class="meta"><b>Draft Content</b><span>Approved 24 Sep</span></div><div class="right">₹30,000<span class="chip ok">Paid</span></div></li>
+            <li class="now"><span class="n">03</span><div class="meta"><b>Published Content</b><span>Submitted today, 09:12</span></div><div class="right">₹30,000<span class="chip warn">In review</span></div></li>
+            <li><span class="n">04</span><div class="meta"><b>Performance Report</b><span>Due 15 Oct</span></div><div class="right">₹20,000<span class="chip idle">Upcoming</span></div></li>
+          </ol>
+          <div class="review-box">
+            <span class="dot-ic" style="background:#fff"><svg class="ico"><use href="#i-file"/></svg></span>
+            <div class="meta"><b>Reel + 3 stories published</b>instagram.com/p/monsoon-glow · 2 files · Published 28 Sep</div>
+            <button class="btn btn-ghost btn-sm">Request changes</button>
+            <button class="btn btn-primary btn-sm">Approve &amp; release ₹30,000</button>
+          </div>
+        </div>
+
+        <div class="panel glass">
+          <div class="panel-head"><h2>Lifecycle</h2></div>
+          <ol class="steps">
+            <li class="done"><span class="n"></span><div class="meta"><b>Published</b></div></li>
+            <li class="done"><span class="n"></span><div class="meta"><b>Contract accepted</b></div></li>
+            <li class="done"><span class="n"></span><div class="meta"><b>Funded</b><span>₹1,00,000 protected</span></div></li>
+            <li class="done"><span class="n"></span><div class="meta"><b>Active</b></div></li>
+            <li class="now"><span class="n"></span><div class="meta"><b>Milestone 03 under review</b></div></li>
+            <li><span class="n"></span><div class="meta"><b>Completed</b></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="panel glass">
+        <div class="panel-head"><h2>All campaigns</h2></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Campaign</th><th>Creator</th><th>State</th><th class="r">Value</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><b>Monsoon Glow Launch</b></td><td>Aanya Mehta</td><td><span class="chip warn">Under review</span></td><td class="r">₹1,00,000</td><td class="r"><a href="#campaigns" class="link">Open</a></td></tr>
+              <tr><td><b>Hydration Week</b></td><td>Rohan Das</td><td><span class="chip warn">Under review</span></td><td class="r">₹75,000</td><td class="r"><a href="#campaigns" class="link">Open</a></td></tr>
+              <tr><td><b>Sunscreen Summer Reels</b></td><td>Kabir Rao</td><td><span class="chip">Contract accepted</span></td><td class="r">₹60,000</td><td class="r"><a href="#payments" class="link">Fund</a></td></tr>
+              <tr><td><b>Night Repair Serum</b></td><td>Meera Iyer</td><td><span class="chip idle">Negotiation</span></td><td class="r">₹80,000</td><td class="r"><a href="#messages" class="link">Open</a></td></tr>
+              <tr><td><b>Festive Gift Box</b></td><td class="muted">12 applicants</td><td><span class="chip">Published</span></td><td class="r">₹1,50,000</td><td class="r"><a href="#discover" class="link">Review</a></td></tr>
+              <tr><td><b>Clean Beauty Series</b></td><td>Ishaan Verma</td><td><span class="chip ok">Completed</span></td><td class="r">₹1,20,000</td><td class="r"><a href="#campaigns" class="link">Report</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover -->
+    <section class="view" id="discover">
+      <div class="page-head">
+        <div><h1>Discover creators</h1><p>Verified creators, ranked by fit for your campaigns.</p></div>
+      </div>
+      <div class="filters">
+        <button class="filter on">All</button><button class="filter">Beauty</button><button class="filter">Skincare</button><button class="filter">Lifestyle</button>
+        <button class="filter">Instagram</button><button class="filter">YouTube</button><button class="filter">10K–100K</button><button class="filter">100K–1M</button>
+      </div>
+      <div class="cards">
+        <article class="ccard glass">
+          <div class="ccard-head"><span class="av round soft">SK</span><div class="meta"><b>Sara Khan</b><span class="verified">Instagram verified</span></div><span class="match">94% match</span></div>
+          <div class="tags"><span class="tag">Beauty</span><span class="tag">Makeup</span><span class="tag">Mumbai</span></div>
+          <div class="mini-stats"><div><b>312K</b><span>Followers</span></div><div><b>4.9</b><span>Rating</span></div><div><b>24</b><span>Campaigns</span></div></div>
+          <div class="btns"><button class="btn btn-ghost btn-sm">Profile</button><button class="btn btn-primary btn-sm">Invite</button></div>
+        </article>
+        <article class="ccard glass">
+          <div class="ccard-head"><span class="av round alt">NR</span><div class="meta"><b>Nisha Rao</b><span class="verified">Instagram verified</span></div><span class="match">91% match</span></div>
+          <div class="tags"><span class="tag">Skincare</span><span class="tag">Routines</span><span class="tag">Bengaluru</span></div>
+          <div class="mini-stats"><div><b>86K</b><span>Followers</span></div><div><b>4.8</b><span>Rating</span></div><div><b>11</b><span>Campaigns</span></div></div>
+          <div class="btns"><button class="btn btn-ghost btn-sm">Profile</button><button class="btn btn-primary btn-sm">Invite</button></div>
+        </article>
+        <article class="ccard glass">
+          <div class="ccard-head"><span class="av round">DM</span><div class="meta"><b>Dev Malhotra</b><span class="verified">YouTube verified</span></div><span class="match">87% match</span></div>
+          <div class="tags"><span class="tag">Lifestyle</span><span class="tag">Grooming</span><span class="tag">Delhi</span></div>
+          <div class="mini-stats"><div><b>1.1M</b><span>Subscribers</span></div><div><b>4.7</b><span>Rating</span></div><div><b>37</b><span>Campaigns</span></div></div>
+          <div class="btns"><button class="btn btn-ghost btn-sm">Profile</button><button class="btn btn-primary btn-sm">Invite</button></div>
+        </article>
+        <article class="ccard glass">
+          <div class="ccard-head"><span class="av round ink">TP</span><div class="meta"><b>Tara Pillai</b><span class="verified">Instagram verified</span></div><span class="match">85% match</span></div>
+          <div class="tags"><span class="tag">Wellness</span><span class="tag">Clean beauty</span><span class="tag">Kochi</span></div>
+          <div class="mini-stats"><div><b>142K</b><span>Followers</span></div><div><b>4.8</b><span>Rating</span></div><div><b>15</b><span>Campaigns</span></div></div>
+          <div class="btns"><button class="btn btn-ghost btn-sm">Profile</button><button class="btn btn-primary btn-sm">Invite</button></div>
+        </article>
+        <article class="ccard glass">
+          <div class="ccard-head"><span class="av round soft">AJ</span><div class="meta"><b>Arjun Jain</b><span class="verified">YouTube verified</span></div><span class="match">82% match</span></div>
+          <div class="tags"><span class="tag">Reviews</span><span class="tag">Men's care</span><span class="tag">Pune</span></div>
+          <div class="mini-stats"><div><b>540K</b><span>Subscribers</span></div><div><b>4.6</b><span>Rating</span></div><div><b>29</b><span>Campaigns</span></div></div>
+          <div class="btns"><button class="btn btn-ghost btn-sm">Profile</button><button class="btn btn-primary btn-sm">Invite</button></div>
+        </article>
+        <article class="ccard glass">
+          <div class="ccard-head"><span class="av round alt">ZS</span><div class="meta"><b>Zoya Sheikh</b><span class="verified">Instagram verified</span></div><span class="match">80% match</span></div>
+          <div class="tags"><span class="tag">Fashion</span><span class="tag">Beauty</span><span class="tag">Hyderabad</span></div>
+          <div class="mini-stats"><div><b>68K</b><span>Followers</span></div><div><b>5.0</b><span>Rating</span></div><div><b>7</b><span>Campaigns</span></div></div>
+          <div class="btns"><button class="btn btn-ghost btn-sm">Profile</button><button class="btn btn-primary btn-sm">Invite</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Payments -->
+    <section class="view" id="payments">
+      <div class="page-head">
+        <div><h1>Payments</h1><p>Funds are held by our payment partner and released per approved milestone.</p></div>
+        <div class="actions"><button class="btn btn-primary">Fund a campaign</button></div>
+      </div>
+      <div class="kpis three">
+        <div class="kpi glass hl"><div class="l">Protected funds</div><div class="v">₹1,25,000</div><div class="d">Held for 2 campaigns</div></div>
+        <div class="kpi glass"><div class="l">Released to creators</div><div class="v">₹50,000</div><div class="d">This month</div></div>
+        <div class="kpi glass"><div class="l">Awaiting funding</div><div class="v">₹60,000</div><div class="d">Sunscreen Summer Reels</div></div>
+      </div>
+      <div class="panel glass">
+        <div class="panel-head"><h2>Transactions</h2></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Date</th><th>Campaign</th><th>Event</th><th class="r">Amount</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>26 Sep</td><td>Hydration Week</td><td>Campaign funded</td><td class="r">₹75,000</td><td><span class="chip">Protected</span></td></tr>
+              <tr><td>24 Sep</td><td>Monsoon Glow Launch</td><td>Milestone 02 released to Aanya Mehta</td><td class="r">₹30,000</td><td><span class="chip ok">Released</span></td></tr>
+              <tr><td>16 Sep</td><td>Monsoon Glow Launch</td><td>Milestone 01 released to Aanya Mehta</td><td class="r">₹20,000</td><td><span class="chip ok">Released</span></td></tr>
+              <tr><td>12 Sep</td><td>Monsoon Glow Launch</td><td>Campaign funded</td><td class="r">₹1,00,000</td><td><span class="chip">Protected</span></td></tr>
+              <tr><td>02 Sep</td><td>Clean Beauty Series</td><td>Final milestone released to Ishaan Verma</td><td class="r">₹40,000</td><td><span class="chip ok">Released</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="view" id="messages">
+      <div class="page-head"><div><h1>Messages</h1><p>Every conversation is linked to its campaign.</p></div></div>
+      <div class="chat glass">
+        <div class="threads">
+          <div class="thread on"><span class="av sm round alt">AM</span><div class="meta"><b>Aanya Mehta</b><span>Monsoon Glow · Milestone 03 submitted</span></div></div>
+          <div class="thread"><span class="av sm round ink">MI</span><div class="meta"><b>Meera Iyer</b><span>Night Repair · Sent a counter-offer</span></div></div>
+          <div class="thread"><span class="av sm round soft">RD</span><div class="meta"><b>Rohan Das</b><span>Hydration Week · Concept deck attached</span></div></div>
+          <div class="thread"><span class="av sm round">KR</span><div class="meta"><b>Kabir Rao</b><span>Sunscreen Reels · Contract accepted</span></div></div>
+        </div>
+        <div class="convo">
+          <div class="convo-head"><span class="av sm round alt">AM</span><div class="meta"><b>Aanya Mehta</b><span>Monsoon Glow Launch</span></div><a href="#campaigns" class="btn btn-ghost btn-sm">View campaign</a></div>
+          <div class="msgs">
+            <div class="sys">Milestone 02 approved · ₹30,000 released · 24 Sep</div>
+            <div class="msg me">Loved the draft! Can we post Saturday evening for the monsoon hook?</div>
+            <div class="msg">Absolutely — Saturday 7 PM works. I'll share links once it's live.</div>
+            <div class="sys">Milestone 03 submitted · Published Content · Today 09:12</div>
+            <div class="attach"><span class="dot-ic"><svg class="ico"><use href="#i-file"/></svg></span><div><b>Reel + 3 stories</b><span class="muted">Links and screenshots attached</span></div></div>
+            <div class="msg">It's live! Reel is already at 42K views 🎉</div>
+          </div>
+          <form class="composer" onsubmit="return false"><input class="input" placeholder="Write a message…" aria-label="Message"><button class="btn btn-primary" aria-label="Send"><svg class="ico" style="width:18px"><use href="#i-send"/></svg></button></form>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  // Highlight the sidebar link for the current view.
+  const sync = () => document.querySelectorAll('.side-nav a').forEach(a => a.classList.toggle('active', a.hash === (location.hash || '#overview')));
+  addEventListener('hashchange', sync); sync();
+</script>
+</body>
+</html>

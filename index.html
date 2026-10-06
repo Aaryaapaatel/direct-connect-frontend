@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Direct Connect</title>
+  <meta name="description" content="Discover the right creators, agree on transparent terms, fund securely, manage milestones and release payments for completed work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="landing.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5aa8ff"/><stop offset="1" stop-color="#0f62d6"/></linearGradient>
+    <clipPath id="fc"><circle cx="32" cy="32" r="32"/></clipPath>
+  </defs>
+  <symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="url(#lg)"/><circle cx="12.5" cy="16" r="5.5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="19.5" cy="16" r="5.5" fill="none" stroke="#fff" stroke-width="2.2" opacity=".75"/></symbol>
+  <!-- Illustrated people: colours come from --bg, --skin, --hair, --shirt on each <svg> -->
+  <symbol id="face" viewBox="0 0 64 64"><g clip-path="url(#fc)">
+    <circle cx="32" cy="32" r="32" fill="var(--bg, #e3efff)"/>
+    <path d="M10 66c2-13 11-19 22-19s20 6 22 19z" fill="var(--shirt, #1677f0)"/>
+    <rect x="27" y="38" width="10" height="11" rx="4" fill="var(--skin, #f3c6a0)"/>
+    <ellipse cx="32" cy="29" rx="12" ry="13" fill="var(--skin, #f3c6a0)"/>
+    <path d="M19 29c-1-11 6-16 13-16s15 5 13 16c-2-5-5-8-9-8-4 4-11 4-17 8z" fill="var(--hair, #2a2236)"/>
+    <circle cx="27.5" cy="30.5" r="1.6" fill="#1d1d27"/><circle cx="36.5" cy="30.5" r="1.6" fill="#1d1d27"/>
+    <path d="M28.5 35.5c2 2 5 2 7 0" stroke="#1d1d27" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <circle cx="24.5" cy="34.5" r="2.2" fill="#ff8f7a" opacity=".45"/><circle cx="39.5" cy="34.5" r="2.2" fill="#ff8f7a" opacity=".45"/>
+  </g></symbol>
+  <symbol id="face2" viewBox="0 0 64 64"><g clip-path="url(#fc)">
+    <circle cx="32" cy="32" r="32" fill="var(--bg, #ffe9e2)"/>
+    <path d="M17 31c0-12 6-18 15-18s15 6 15 18v15c-3 2-7 2-9 0V30H26v16c-2 2-6 2-9 0z" fill="var(--hair, #5a3524)"/>
+    <path d="M10 66c2-13 11-19 22-19s20 6 22 19z" fill="var(--shirt, #ff7a3d)"/>
+    <rect x="27" y="38" width="10" height="11" rx="4" fill="var(--skin, #f6cfae)"/>
+    <ellipse cx="32" cy="29" rx="11.5" ry="12.5" fill="var(--skin, #f6cfae)"/>
+    <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-5-1-10-4-12-7-2 4-7 6-12 7z" fill="var(--hair, #5a3524)"/>
+    <circle cx="27.5" cy="30.5" r="1.6" fill="#1d1d27"/><circle cx="36.5" cy="30.5" r="1.6" fill="#1d1d27"/>
+    <path d="M28.5 35.5c2 2 5 2 7 0" stroke="#1d1d27" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <circle cx="24.5" cy="34.5" r="2.2" fill="#ff8f7a" opacity=".5"/><circle cx="39.5" cy="34.5" r="2.2" fill="#ff8f7a" opacity=".5"/>
+  </g></symbol>
+  <symbol id="ig" viewBox="0 0 32 32"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="3" y="3" width="26" height="26" rx="8" fill="url(#igg)"/><rect x="9" y="9" width="14" height="14" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="16" r="3.4" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="21.6" cy="10.4" r="1.3" fill="#fff"/></symbol>
+  <symbol id="yt" viewBox="0 0 32 32"><rect x="2" y="7" width="28" height="18" rx="6" fill="#ff2d2d"/><path d="M13.5 11.5v9l8-4.5z" fill="#fff"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-approve" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="sparkle" viewBox="0 0 30 26"><path d="M3 16l9 4M10 3l6 11M24 1l-2 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo"><svg><use href="#logo"/></svg><span class="logo-text">Direct Connect</span></a>
+    <div class="nav-links">
+      <a href="#top" class="on">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-primary">Login</a>
+      <a href="login.html#signup" class="btn btn-ghost">Sign up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="top" data-scroll="exit">
+  <svg class="loop" viewBox="0 0 900 420" aria-hidden="true"><path pathLength="1" d="M-20 300C120 140 260 380 380 240S560 40 620 170c40 90-90 120-80 40s150-120 380-40"/></svg>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1 class="h-display" id="hero-title">Where Brands and Creators Build <span class="mark">Campaigns<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 9C50 3 130 2 197 6"/></svg></span> That Work!<svg class="spark" aria-hidden="true"><use href="#sparkle"/></svg></h1>
+      <p class="lead rise" style="--d:.2s">Discover the right creators, agree on clear terms, fund securely, and release payments as each milestone is approved.</p>
+      <div class="hero-cta rise" style="--d:.35s">
+        <a href="#how" class="btn btn-primary btn-lg">See how it works</a>
+        <div class="trust-mini">
+          <span class="faces"><svg style="--shirt:#1677f0"><use href="#face"/></svg><svg style="--shirt:#ff7a3d;--bg:#fff1e8"><use href="#face2"/></svg><svg style="--shirt:#22a06b;--bg:#e7f8ef;--hair:#111"><use href="#face"/></svg></span>
+          <span>Verified brands &amp; creators</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art rise" style="--d:.25s">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="status"><b>9:41</b><span>●●● ▮</span></div>
+            <div class="app-top"><div><span class="muted">Hi Riya 👋</span><b>Your campaigns</b></div><svg class="av-svg" style="--shirt:#14171f;--bg:#e3efff"><use href="#face2"/></svg></div>
+            <div class="feature-card">
+              <span class="tag-sm">Protected</span>
+              <b>Monsoon Glow Launch</b>
+              <span>₹1,00,000 · with Aanya Mehta</span>
+              <div class="mini-bar"><i style="width:50%"></i></div>
+              <small>2 of 4 milestones paid</small>
+            </div>
+            <div class="list-head"><b>Milestones</b><span>See all</span></div>
+            <ul class="ms-list">
+              <li><span class="dot ok"></span><div><b>Brief + Concept</b><small>₹20,000</small></div><em class="ok">Paid</em></li>
+              <li><span class="dot ok"></span><div><b>Draft Content</b><small>₹30,000</small></div><em class="ok">Paid</em></li>
+              <li><span class="dot rv"></span><div><b>Published Content</b><small>₹30,000</small></div><em class="rv">Review</em></li>
+            </ul>
+            <div class="tabbar"><svg class="ico"><use href="#i-home"/></svg><svg class="ico"><use href="#i-search"/></svg><span class="fab"><svg class="ico"><use href="#i-plus"/></svg></span><svg class="ico"><use href="#i-chat"/></svg><svg class="ico"><use href="#i-user"/></svg></div>
+          </div>
+        </div>
+        <div class="float-chip c1"><span class="ok-dot"></span>Contract signed</div>
+        <div class="float-chip c2"><b>₹30,000</b><span>released to Aanya</span></div>
+        <div class="float-chip c3"><svg class="av-svg"><use href="#face"/></svg><div><b>Aanya Mehta</b><span class="verified">Instagram verified</span></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Stats band -->
+<section class="band-wrap">
+  <div class="container">
+    <div class="band" data-stagger>
+      <div class="stat-b"><b><span data-count="100">0</span>%</b><span>Funded before<br>work starts</span></div>
+      <div class="stat-b"><b>8<i>→</i>1</b><span>Tools replaced<br>by one</span></div>
+      <div class="stat-b"><b>2-way</b><span>Verification &amp;<br>reputation</span></div>
+      <div class="stat-b"><b>0</b><span>Invoices to<br>chase</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Niches marquee -->
+<section class="marquee" aria-label="Creator niches">
+  <p class="mq-label">Creators across every niche</p>
+  <div class="mq"><div class="mq-track">
+    <span style="--c:#ec4899">Beauty</span><span style="--c:#f97316">Skincare</span><span style="--c:#8b5cf6">Fashion</span><span style="--c:#22c55e">Fitness</span>
+    <span style="--c:#eab308">Food</span><span style="--c:#06b6d4">Travel</span><span style="--c:#3b82f6">Tech</span><span style="--c:#ef4444">Gaming</span>
+  </div></div>
+  <div class="mq rev"><div class="mq-track">
+    <span style="--c:#10b981">Finance</span><span style="--c:#a855f7">Music</span><span style="--c:#f43f5e">Parenting</span><span style="--c:#f59e0b">Home &amp; Decor</span>
+    <span style="--c:#0ea5e9">Education</span><span style="--c:#84cc16">Wellness</span><span style="--c:#6366f1">Comedy</span><span style="--c:#d946ef">Pets</span>
+  </div></div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="container feat-grid">
+    <div class="reveal">
+      <h2 class="h2">That's How Campaigns Should Run!<svg class="spark sm" aria-hidden="true"><use href="#sparkle"/></svg></h2>
+      <p class="muted">Everything a brand and a creator need, from first hello to final payment.</p>
+    </div>
+    <div class="feats" data-stagger>
+      <article class="feat">
+        <svg class="f-ico" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="fg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7cc0ff"/><stop offset="1" stop-color="#1668e8"/></linearGradient></defs><rect x="40" y="38" width="9" height="22" rx="4.5" transform="rotate(-45 44.5 49)" fill="#0f3d91"/><circle cx="27" cy="27" r="19" fill="url(#fg1)"/><circle cx="27" cy="27" r="13" fill="#fff"/><circle cx="27" cy="23.5" r="4.5" fill="#ffb27a"/><path d="M18.5 35c1.5-5 5-7 8.5-7s7 2 8.5 7" fill="#ff7a3d"/><circle cx="46" cy="14" r="8" fill="#22c07a"/><path d="M42.5 14l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Verified Discovery</h3>
+        <p>Find creators and brands with verified identity, social accounts and real campaign history.</p>
+      </article>
+      <article class="feat">
+        <svg class="f-ico" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="fg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5ee0b0"/><stop offset="1" stop-color="#0d9f6e"/></linearGradient></defs><path d="M32 5l22 8v16c0 14-9.5 23-22 27C19.5 52 10 43 10 29V13z" fill="url(#fg2)"/><path d="M32 11l16 6v12c0 10.5-7 17.5-16 20.5" fill="#fff" opacity=".22"/><text x="32" y="38" text-anchor="middle" font-family="Urbanist, sans-serif" font-weight="800" font-size="20" fill="#fff">₹</text></svg>
+        <h3>Protected Payments</h3>
+        <p>Brands fund upfront. Money is held safely and released only when the work is approved.</p>
+      </article>
+      <article class="feat">
+        <svg class="f-ico" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="fg3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb36b"/><stop offset="1" stop-color="#ff6a2b"/></linearGradient></defs><rect x="8" y="14" width="34" height="42" rx="7" fill="#e9f1ff"/><rect x="14" y="24" width="18" height="4" rx="2" fill="#9cc3f7"/><rect x="14" y="33" width="14" height="4" rx="2" fill="#9cc3f7"/><rect x="14" y="42" width="16" height="4" rx="2" fill="#9cc3f7"/><path d="M40 8v50" stroke="#14171f" stroke-width="3.5" stroke-linecap="round"/><path d="M41 9h17l-5 8 5 8H41z" fill="url(#fg3)"/></svg>
+        <h3>Milestone Tracking</h3>
+        <p>Split campaigns into clear steps. Submit, review and approve work in one place.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Discovery (map-style) -->
+<section class="section discover">
+  <div class="container disc-grid">
+    <div class="disc-art reveal" aria-hidden="true">
+      <div class="dots"></div>
+      <svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M58 62L18 40M58 62L44 26M58 62L84 34M58 62L32 84"/></svg>
+      <div class="pin p1" style="--i:0"><svg style="--shirt:#1677f0;--bg:#e3efff"><use href="#face"/></svg></div>
+      <div class="pin p2" style="--i:1"><svg style="--shirt:#ff7a3d;--bg:#fff1e8"><use href="#face2"/></svg></div>
+      <div class="pin p3 big" style="--i:2"><svg style="--shirt:#8b5cf6;--bg:#f1ebff;--hair:#3b2a1e"><use href="#face2"/></svg><span class="pin-tag">94% match</span></div>
+      <div class="map-chip mc1"><span class="ok-dot"></span>Identity verified</div>
+      <div class="map-chip mc2"><i></i>Invite sent · ₹45,000</div>
+      <div class="pin p4" style="--i:3"><svg style="--shirt:#22a06b;--bg:#e7f8ef;--hair:#111"><use href="#face"/></svg></div>
+      <div class="pin p5" style="--i:4"><svg style="--shirt:#e11d74;--bg:#ffe9f2;--skin:#d9a37c"><use href="#face2"/></svg></div>
+    </div>
+    <div class="reveal">
+      <h2 class="h2">Beauty, Tech, Food, Travel — Who Will You Work With?</h2>
+      <p class="muted">Search verified creators by niche, platform and audience. See their real campaign history before you invite them.</p>
+      <div class="searchbar">
+        <div class="sb-field"><svg class="ico"><use href="#i-search"/></svg><div><b>Category</b><span class="rot" id="cat-rot">Beauty &amp; skincare</span></div></div>
+        <div class="sb-field"><svg class="sb-ig"><use href="#ig"/></svg><div><b>Platform</b><span>Instagram</span></div></div>
+        <a href="login.html#signup" class="sb-go" aria-label="Find creators — sign up first"><svg class="ico"><use href="#i-search"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="head reveal">
+      <h2 class="h2">Four Simple Steps</h2>
+      <p class="muted">The same clear path for every campaign — and both sides always see where it stands.</p>
+    </div>
+    <div class="steps4" data-stagger>
+      <article class="step"><span class="n">1</span><svg class="ico"><use href="#i-search"/></svg><h3>Discover &amp; match</h3><p>Brands find verified creators. Creators find genuine, funded campaigns.</p></article>
+      <article class="step"><span class="n">2</span><svg class="ico"><use href="#i-file"/></svg><h3>Agree &amp; sign</h3><p>Set deliverables, timelines and price. Sign a clear contract in the app.</p></article>
+      <article class="step"><span class="n">3</span><svg class="ico"><use href="#i-shield"/></svg><h3>Fund &amp; create</h3><p>The brand funds the campaign upfront. The creator gets to work.</p></article>
+      <article class="step"><span class="n">4</span><svg class="ico"><use href="#i-approve"/></svg><h3>Approve &amp; get paid</h3><p>Each approved milestone releases its payment automatically.</p></article>
+    </div>
+    <div class="money reveal">
+      <b>Your money follows the work</b>
+      <div class="chain"><span>Brand funds</span><span>Funds protected</span><span>Milestone approved</span><span>Creator paid</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Community -->
+<section class="section">
+  <div class="container comm-grid">
+    <div class="reveal">
+      <h2 class="h2">Brands and Creators, Finally in One Place.</h2>
+      <p class="muted">Chat, contracts, files and payments all live on the same campaign record. No more WhatsApp threads, email chains or spreadsheets.</p>
+      <ul class="ticks"><li>Every message linked to its campaign</li><li>Work submitted and approved in-app</li><li>A shared history both sides can trust</li></ul>
+    </div>
+    <div class="comm-art reveal" aria-hidden="true">
+      <svg class="links" viewBox="0 0 520 420"><path d="M260 210L110 110M260 210L420 100M260 210L90 300M260 210L430 310M260 210L260 380"/></svg>
+      <div class="person center"><svg style="--shirt:#1677f0;--bg:#dcebff"><use href="#face"/></svg></div>
+      <div class="person a" style="--i:0"><svg style="--shirt:#ff7a3d;--bg:#fff1e8"><use href="#face2"/></svg></div>
+      <div class="person b" style="--i:1"><svg style="--shirt:#22a06b;--bg:#e7f8ef;--hair:#111"><use href="#face"/></svg></div>
+      <div class="person c" style="--i:2"><svg style="--shirt:#8b5cf6;--bg:#f1ebff;--hair:#3b2a1e"><use href="#face2"/></svg></div>
+      <div class="person d" style="--i:3"><svg style="--shirt:#e11d74;--bg:#ffe9f2;--skin:#d9a37c"><use href="#face"/></svg></div>
+      <span class="bubble b1">Loved the draft! 🎉</span>
+      <span class="bubble b2">Contract signed ✓</span>
+      <span class="bubble b3">₹30,000 released</span>
+      <span class="social s1"><svg><use href="#ig"/></svg></span>
+      <span class="social s2"><svg><use href="#yt"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- Why switch -->
+<section class="section">
+  <div class="container">
+    <div class="head reveal">
+      <h2 class="h2">Why Brands and Creators Switch</h2>
+    </div>
+    <div class="why" data-stagger>
+      <article class="why-card"><span class="q">“</span><p>No more chasing payments in DMs. The money is there before the work starts.</p><div class="who-row"><svg style="--shirt:#ff7a3d;--bg:#fff1e8"><use href="#face2"/></svg><b>For creators</b></div></article>
+      <article class="why-card"><span class="q">“</span><p>Know exactly what you're paying for, milestone by milestone, with proof for each one.</p><div class="who-row"><svg style="--shirt:#1677f0"><use href="#face"/></svg><b>For brands</b></div></article>
+      <article class="why-card"><span class="q">“</span><p>Contract, chat, files and payments in one record — and a reputation that grows with every campaign.</p><div class="who-row"><svg style="--shirt:#22a06b;--bg:#e7f8ef;--hair:#111"><use href="#face"/></svg><b>For both sides</b></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container faq-grid">
+    <div class="reveal">
+      <h2 class="h2">Got a Question for Direct Connect?<svg class="spark sm" aria-hidden="true"><use href="#sparkle"/></svg></h2>
+      <p class="muted">Here are the answers people look for most. Still curious? Sign up from the top right and look around.</p>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>What is Direct Connect?</summary><p>A platform where brands and creators find each other, agree on terms, fund campaigns and release payments milestone by milestone — all in one place.</p></details>
+      <details><summary>How are payments protected?</summary><p>Brands fund the campaign upfront through a regulated payment partner. The money is held for that campaign and released only when a milestone is approved.</p></details>
+      <details><summary>How do milestones work?</summary><p>A campaign is split into steps, such as brief, draft, published content and report. Each step has its own deliverable, amount and approval.</p></details>
+      <details><summary>What if something goes wrong?</summary><p>Either side can raise a dispute with evidence. The other side responds, the platform reviews it, and the funds follow the resolution.</p></details>
+      <details><summary>Who can join?</summary><p>Brands with a verified business and creators with verified identity and social accounts.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container foot-inner">
+    <div class="foot-brand">
+      <a href="#top" class="logo"><svg><use href="#logo"/></svg>Direct Connect</a>
+      <p>Where brands and creators build campaigns that work.</p>
+    </div>
+    <nav class="foot-links">
+      <div><b>Product</b><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
+      <div><b>Account</b><a href="login.html">Login</a><a href="login.html#signup">Sign up</a></div>
+      <div><b>Legal</b><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </nav>
+  </div>
+  <div class="container foot-base">© 2026 Direct Connect</div>
+</footer>
+
+<script>
+  const root = document.documentElement, nav = document.querySelector('.nav');
+  const clamp = v => Math.min(1, Math.max(0, v));
+
+  // Scroll progress: --page on <html>, --p on the hero as it scrolls away.
+  const hero = document.querySelector('.hero');
+  let lastY = scrollY;
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Split headings into words so they can rise in one by one. Inline elements (underline, sparkle) move as one word.
+  document.querySelectorAll('.h-display, .h2').forEach(h => {
+    let i = 0; const out = document.createDocumentFragment();
+    [...h.childNodes].forEach(n => {
+      if (n.nodeType !== 3) { n.classList.add('w'); n.style.setProperty('--i', i++); out.append(n); return; }
+      n.textContent.split(/(\s+)/).forEach(t => {
+        if (!t) return;
+        if (/^\s+$/.test(t)) { out.append(t); return; }
+        const w = document.createElement('span'); w.className = 'w'; w.style.setProperty('--i', i++); w.textContent = t; out.append(w);
+      });
+    });
+    h.replaceChildren(out); h.classList.add('split');
+  });
+  requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('hero-title').classList.add('in')));
+
+  // Hero: the phone tilts in 3D toward the pointer; chips float at different depths.
+  const art = document.querySelector('.hero-art');
+  if (!calm && matchMedia('(pointer: fine)').matches) {
+    hero.addEventListener('pointermove', e => {
+      const r = art.getBoundingClientRect();
+      art.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5) * 2);
+      art.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5) * 2);
+    });
+    hero.addEventListener('pointerleave', () => { art.style.setProperty('--mx', 0); art.style.setProperty('--my', 0); });
+  }
+
+  // Cards light up where the pointer is.
+  document.querySelectorAll('.step, .why-card, .feat').forEach(c => c.addEventListener('pointermove', e => {
+    const r = c.getBoundingClientRect();
+    c.style.setProperty('--sx', e.clientX - r.left + 'px');
+    c.style.setProperty('--sy', e.clientY - r.top + 'px');
+  }));
+
+  // Discovery map: layers shift with the pointer; pins switch to quick easing once they have popped in.
+  const map = document.querySelector('.disc-art');
+  if (!calm && matchMedia('(pointer: fine)').matches) {
+    map.addEventListener('pointermove', e => {
+      const r = map.getBoundingClientRect();
+      map.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5) * 2);
+      map.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5) * 2);
+    });
+    map.addEventListener('pointerleave', () => { map.style.setProperty('--mx', 0); map.style.setProperty('--my', 0); });
+  }
+  new MutationObserver((_, o) => { if (map.classList.contains('in')) { setTimeout(() => map.classList.add('settled'), 1600); o.disconnect(); } }).observe(map, { attributes: true });
+
+  // Search bar: cycle through example categories.
+  const rot = document.getElementById('cat-rot');
+  const cats = ['Beauty & skincare', 'Tech & gadgets', 'Food & recipes', 'Travel & stays', 'Fitness & health'];
+  let ci = 0;
+  if (!calm) setInterval(() => {
+    rot.classList.add('out');
+    setTimeout(() => { ci = (ci + 1) % cats.length; rot.textContent = cats[ci]; rot.classList.remove('out'); }, 350);
+  }, 2400);
+
+  // Marquee: duplicate each row once so it loops seamlessly.
+  document.querySelectorAll('.mq-track').forEach(t => t.append(...[...t.children].map(c => { const k = c.cloneNode(true); k.setAttribute('aria-hidden', 'true'); return k; })));
+  function frame() {
+    root.style.setProperty('--page', clamp(scrollY / (root.scrollHeight - innerHeight)));
+    nav.classList.toggle('scrolled', scrollY > 8);
+    // Hide the nav while scrolling down, bring it back on scroll up.
+    nav.classList.toggle('hide', scrollY > lastY && scrollY > 320);
+    lastY = scrollY;
+    hero.style.setProperty('--p', clamp(scrollY / hero.offsetHeight).toFixed(4));
+  }
+  let queued = false;
+  addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; frame(); }); } }, { passive: true });
+  addEventListener('resize', frame);
+  frame();
+
+  // Count-up numbers.
+  function count(el) {
+    const to = +el.dataset.count, t0 = performance.now();
+    const step = t => {
+      const k = Math.min(1, (t - t0) / 1400);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  // Reveal on enter, with staggered children and counters.
+  document.querySelectorAll('[data-stagger]').forEach(g => [...g.children].forEach((c, i) => c.style.setProperty('--i', i)));
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(count);
+    io.unobserve(e.target);
+  }), { threshold: .18 });
+  document.querySelectorAll('.reveal, [data-stagger]').forEach(el => io.observe(el));
+
+  // Highlight the nav link for the section in view.
+  const links = [...document.querySelectorAll('.nav-links a')];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.hash === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  ['top', 'features', 'how', 'faq'].forEach(id => spy.observe(document.getElementById(id)));
+</script>
+</body>
+</html>
